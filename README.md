@@ -47,8 +47,19 @@ pytest -v
 
 ---
 
-## 📋 Casos de Prueba Cubiertos
+## 📋 Escenarios de Prueba para el Parámetro "firstName"
 
-El script de pruebas valida los siguientes escenarios para el campo `firstName`:
-1. **Valores válidos**: Cadenas de texto con longitudes permitidas (por ejemplo, límites mínimos y máximos de caracteres).
-2. **Valores inválidos**: Cadenas vacías, valores nulos (`None`), tipos de datos incorrectos (números o booleanos) o longitudes que exceden el límite permitido.
+El suite de pruebas automatizadas valida las reglas de negocio del campo `firstName` durante el proceso de registro y creación de un nuevo usuario, dividiéndose en los siguientes escenarios:
+
+### Casos Positivos (Respuesta esperada: 201 Created)
+* **Caso 1**: Registro exitoso con la longitud mínima permitida para el nombre (2 caracteres, Ej: `"Aa"`).
+* **Caso 2**: Registro exitoso con la longitud máxima permitida para el nombre (15 caracteres, Ej: `"Aaaaaaaaaaaaaaa"`).
+
+### Casos Negativos (Respuesta esperada: 400 Bad Request)
+* **Caso 3**: Error al intentar registrar un nombre que excede el límite permitido (16 caracteres).
+* **Caso 4**: Error al intentar registrar un nombre que contiene espacios intermedios (Ej: `"A Aaa"`).
+* **Caso 5**: Error al intentar registrar un nombre que contiene símbolos o caracteres especiales (Ej: `'"№%",'`).
+* **Caso 6**: Error al intentar registrar un nombre compuesto por dígitos numéricos (Ej: `"123"`).
+* **Caso 7**: Error al omitir por completo el parámetro obligatorio `firstName` en el cuerpo de la solicitud JSON.
+* **Caso 8**: Error al enviar el parámetro `firstName` como una cadena de texto totalmente vacía (`""`).
+* **Caso 9**: Error de tipo al pasar un valor numérico entero (Ej: `12`) en lugar del tipo de dato cadena (*string*).
