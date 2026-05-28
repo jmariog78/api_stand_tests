@@ -12,7 +12,15 @@ Antes de ejecutar las pruebas, asegúrate de tener instalado Python 3.x en tu si
 pip install pytest requests
 ```
 
----
+## 🛠️ Tecnologías Utilizadas
+
+Este proyecto fue desarrollado utilizando el siguiente stack tecnológico enfocado en pruebas automatizadas y control de versiones:
+
+* **Python 3.x**: Lenguaje de programación principal para la lógica de los scripts de prueba.
+* **Pytest**: Entorno y framework de pruebas encargado de ejecutar y validar las aserciones de los casos de prueba.
+* **Requests**: Biblioteca HTTP de Python empleada para enviar las solicitudes (`POST`, `GET`, etc.) y gestionar las respuestas de la API.
+* **Git**: Herramienta de control de versiones utilizada para el seguimiento de cambios y manejo del historial del código.
+* **GitHub**: Plataforma de alojamiento para el almacenamiento, documentación y visualización del repositorio del proyecto.
 
 ## 🗂️ Estructura del Proyecto
 
