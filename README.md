@@ -1,4 +1,4 @@
-﻿markdown# Pruebas Automatizadas de API: Creación de Usuarios
+# Pruebas Automatizadas de API: Creación de Usuarios
 
 Este proyecto contiene un conjunto de pruebas automatizadas en Python orientadas a validar el comportamiento del endpoint de creación de usuarios, enfocándose específicamente en las reglas de negocio del parámetro `firstName`.
 
